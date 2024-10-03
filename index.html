@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Yummy</title>
+
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+
+
+
+  <div class="side-nav-menu d-flex position-fixed top-0">
+    <div class="nav-tap d-flex flex-column justify-content-between">
+      <div class="links">
+        <ul class="list-unstyled">
+          <li onclick="showSearchInput()" class="position-relative">Search</li>
+          <li onclick="getCategory()" class="position-relative">Categories</li>
+          <li onclick="getArea()" class="position-relative">Area</li>
+          <li onclick="getIngredients()" class="position-relative">Ingredients</li>
+          <li class="position-relative"> <a class="text-decoration-none text-white" href="#contact">Contact Us</a></li>
+        </ul>
+
+      </div>
+      <div class="nav-footer">
+        <div class="icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="footer">
+          <p>Copyright Â© 2019 All Rights <br>
+            Reserved.</p>
+        </div>
+      </div>
+    </div>
+    <div class="nav-header d-flex flex-column justify-content-between">
+      <img src="logo.png" alt="">
+      <i class="fa-solid fa-align-justify m-auto open-close-icon fs-2"></i>
+      <div class="d-flex flex-column align-items-center">
+        <i class="fa-solid fa-globe mb-1"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+
+    </div>
+  </div>
+
+  
+
+
+
+  <div class="container">
+    <div class="row py-5 g-4" id="rowData">
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- \\\\\\\\\\\\\for contact///////////\ -->
+
+  <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+
+    <div class="container w-50 text-center">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input class="form-control" oninput="validFotm(this)" placeholder="Enter your name" type="text" id="validName">
+          <p class="opacity-0 text-danger text-start mb-0">Invalid Name, Only characters allowed</p>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" oninput="validFotm(this)" placeholder="Enter your email" type="email" id="validEmail">
+          <p class="opacity-0 text-danger text-start mb-0">Invalid email try example@domain.com</p>
+        </div>
+
+        <div class="col-md-6">
+          <input class="form-control" oninput="validFotm(this)" placeholder="Enter your phone" type="text" id="validPhone">
+          <p class="opacity-0 text-danger text-start  mb-0">Invalid Phone number</p>
+        </div>
+
+        <div class="col-md-6">
+          <input class="form-control" oninput="validFotm(this)" placeholder="Enter your Age" type="number" id="validAge" id="validPass">
+          <p class="opacity-0 text-danger text-start  mb-0">your age must be 16+</p>
+        </div>
+
+        <div class="col-md-6 position-relative" id="contact">
+          <input class="form-control position-relative" oninput="validFotm(this)" placeholder="Enter your Password" type="password" id="validPass">
+          <p class="opacity-0 text-danger text-start mb-0">Password must contain letters and numbers at least 8 characters</p>
+          <i class="fa-solid fa-eye-slash text-danger position-absolute mt-3 end-0 me-3 top-0"></i>
+        </div>
+
+        <div class="col-md-6">
+          <input class="form-control" oninput="checkPass()" placeholder="Repassword" type="password" id="repass">
+          <p class="opacity-0 text-danger text-start  mb-0">Password does not match</p>
+        </div>
+      </div>
+      <button onclick="clearInputs()" class="btn bg-transparent border-danger text-danger mt-3">Submit</button>
+
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
